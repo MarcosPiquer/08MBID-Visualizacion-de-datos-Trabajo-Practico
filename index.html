@@ -11,7 +11,15 @@
     href="https://github.com/MarcosPiquer/08MBID-Visualizacion-de-datos-Trabajo-Practico"
     target="_blank"
   >
-  https://github.com/MarcosPiquer/08MBID-Visualizacion-de-datos-Trabajo-Practico
+    https://github.com/MarcosPiquer/08MBID-Visualizacion-de-datos-Trabajo-Practico
+  </a>
+  <br />
+  <span class="negrita">Datos:</span>
+  <a
+    href="https://docs.google.com/spreadsheets/d/1cAUR5cpObIYLue58nNf6zDmzwupq3Iih3W5yCmOhlH4/edit?usp=sharing"
+    target="_blank"
+  >
+    https://docs.google.com/spreadsheets/d/1cAUR5cpObIYLue58nNf6zDmzwupq3Iih3W5yCmOhlH4/edit?usp=sharing
   </a>
 
   <h1>Visualización Trabajo Práctico</h1>
@@ -27,35 +35,34 @@
 
   <span class="negrita"> · Audiencia: </span> Esta presentación va dirigida a
   una agencia de medios.
-
   <br /><br />
-
   <span class="negrita"> · Objetivo: </span> Nuestro objetivo es mostrar que
   campañas publicitarias han tenido un mayor impacto positivo en la audiencia
   testada, para que así la agencia de medios (que dispone de los atributos de
   estas campañas) sean capaces de crear nuevos spots publicitarios exitosos.
+  <br /><br />
+  <span class="negrita"> · Mensaje: </span> Para mostrar que campañas publicitarias han tenido un mayor impacto positivo utilizaremos gráficos comparativos como gráficos de barras y gráficos de dispersión.
 
   <h2>Datos</h2>
 
-  Los datos serán tanto las respuestas a las preguntas de las encuestas sobre los
-  spots, como unos valores que se han medido con deep learning de las
+  Los datos serán tanto las respuestas a las preguntas de las encuestas sobre
+  los spots, como unos valores que se han medido con deep learning de las
   expresiones de los entrevistados al reaccionar al video.
 
   <br />
   <br />
 
-  Tendremos dos conjunto de datos. Uno donde cada fila corresponde a los datos de una persona
-  sobre un spot. Y otro donde los
-  datos ya están agregados por campaña. De todas las preguntas/variable que hay
-  en el conjunto de datos, utilizaremos las siguientes para crear las
-  visualizaciones.
+  Tendremos dos conjunto de datos. Uno donde cada fila corresponde a los datos
+  de una persona sobre un spot. Y otro donde los datos ya están agregados por
+  campaña. De todas las preguntas/variables que hay en el conjunto de datos,
+  utilizaremos las siguientes para crear las visualizaciones.
 
   <br /><br />
 
   <span class="negrita"
     >· P1. ¿Recuerdas haber visto el siguiente anuncio?</span
   >
-  En el conjunto de datos desagregado tendremos un 1 si la presona ha contestado
+  En el conjunto de datos desagregado tendremos un 1 si la persona ha contestado
   que "Sí" y un 2 si la persona ha contestado que "No". En el conjunto de datos
   agregado se mostrará el porcentaje de "Síes" sobre el total.
 
@@ -85,19 +92,22 @@
 
   <br /><br />
 
-  <span class="negrita">· NKVPOS.</span>
+  <span class="negrita">· NKVPOS.</span> Mide la valencia positiva.
 
   <br /><br />
 
-  <span class="negrita">· NKINTEN.</span>
+  <span class="negrita">· NKINTEN.</span> Mide el nivel de intensidad de la
+  persona.
 
   <br /><br />
 
-  <span class="negrita">· NKCOMPREN.</span>
+  <span class="negrita">· NKCOMPREN.</span> Mide el nidel de comprensión de la
+  persona.
 
   <br /><br />
 
-  <span class="negrita">· NKINTERES.</span>
+  <span class="negrita">· NKINTERES.</span> Mide el nivel de interés de la
+  persona
 
   <br /><br />
 
@@ -108,9 +118,18 @@
   En primer lugar, para tener una idea de que campañas han impactado más en las
   personas, vamos a ver el top 10 de campañas que más han gustado, el top 10 de
   campañas que más recuerdo tienen y el top 10 de campañas que a la gente le
-  gustaría volver a ver. Para conseguir una visualización clara de esto,
-  utilizaremos unos gráficos de barras horizontales con los datos ordenados de
-  mayor a menor. Así podremos ir viendo de arriba a abajo que
+  gustaría volver a ver.
+  <br /><br />
+  Para conseguir una visualización clara de esto, utilizaremos unos gráficos de
+  barras horizontales con los datos ordenados de mayor a menor. Así podremos
+  leer facilemente la etiqueta de las campañas y veremos de un vistazo de arriba
+  a abajo cuales son los top 10.
+  <br /><br />
+  Para realizar estos 3 gráficos lo haremos en Google Sheet, en la propia hoja
+  de cálculo donde se encuentras los datos. Los gráficos que mostramos a
+  continuación se pueden encontrar en la hoja "GRÁFICOS".
+
+  <br /><br />
 
   <iframe
     width="601"
@@ -141,9 +160,18 @@
 
   <br />
 
+  Vemos como hay algunas campañas que se encuentran más de un top e incluso hay
+  2 campañas, Campaña 9 y Campaña 35, que se encuentran en los 3.
+
   <h3>Matrices</h3>
 
-  A continuación, vamos a crear una
+  A continuación, vamos a utilizar Datawrapper para crear los siguientes dos
+  gráficos.
+
+  <br />
+  <br />
+
+  Vamos a crear una
   <span class="negrita"> matriz de emoción </span> para ver de las campañas que
   se encontraban en los top anteriores, cuales han generado más emoción en las
   personas entrevistadas.
@@ -243,11 +271,22 @@
 
   Para terminar, podemos utilizar la pregunta P8 del cuestionario para ver que
   palabras utilizan los usuarios para describir el spot publicitario de la
-  Campaña 35. Utilizaremos un word cloud para así poder apreciar facilmente
-  cuales son las que más se utilizan.
+  Campaña 35. Utilizaremos un word cloud, para así poder apreciar facilmente
+  cuales son las que más se utilizan. Lo crearemos con python en un cuaderno de
+  Google Colab.
+
+  <br />
+  <br />
+  Google Colab:
+  <a
+    href="https://colab.research.google.com/drive/1H60EJK1CqzmdRvVGcpEmL1qBUDCGpcV4?usp=sharing"
+    target="_blank"
+  >
+    https://colab.research.google.com/drive/1H60EJK1CqzmdRvVGcpEmL1qBUDCGpcV4?usp=sharing
+  </a>
 
   <br />
   <br />
 
-  <img src="wordcloud.png" alt="Word Cloud" />
+  Al final de este cuaderno de google colab, encontraremos el word cloud.
 </div>
