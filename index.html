@@ -1,0 +1,253 @@
+<div id="app">
+  <span class="negrita">Nombre:</span> Marcos Piquer Socuéllamos
+  <br />
+  <span class="negrita">URL:</span>
+  <a href="https://js-rqpj7r.stackblitz.io" target="_blank">
+    https://js-rqpj7r.stackblitz.io
+  </a>
+  <br />
+  <span class="negrita">GitHub:</span>
+  <a
+    href="https://github.com/MarcosPiquer/08MBID---Visualizacion-de-Datos"
+    target="_blank"
+  >
+    https://github.com/MarcosPiquer/08MBID---Visualizacion-de-Datos
+  </a>
+
+  <h1>Visualización Trabajo Práctico</h1>
+
+  <h2>Introducción</h2>
+
+  En este trabajo presentaremos varias visualizaciones que mostrarán el
+  resultado de un conjunto de encuestas que se han realizado sobre distintos
+  spots publicitarios. Por temas de confidencialidad, los nombres de las
+  campañas publicitarias estarán anonimizados.
+
+  <h2>Elementos de la visualización</h2>
+
+  <span class="negrita"> · Audiencia: </span> Esta presentación va dirigida a
+  una agencia de medios.
+
+  <br /><br />
+
+  <span class="negrita"> · Objetivo: </span> Nuestro objetivo es mostrar que
+  campañas publicitarias han tenido un mayor impacto positivo en la audiencia
+  testada, para que así la agencia de medios (que dispone de los atributos de
+  estas campañas) sean capaces de crear nuevos spots publicitarios exitosos.
+
+  <h2>Datos</h2>
+
+  Los datos serán tanto las respuestas a las preguntas de las encuestas sobre los
+  spots, como unos valores que se han medido con deep learning de las
+  expresiones de los entrevistados al reaccionar al video.
+
+  <br />
+  <br />
+
+  Tendremos dos conjunto de datos. Uno donde cada fila corresponde a los datos de una persona
+  sobre un spot. Y otro donde los
+  datos ya están agregados por campaña. De todas las preguntas/variable que hay
+  en el conjunto de datos, utilizaremos las siguientes para crear las
+  visualizaciones.
+
+  <br /><br />
+
+  <span class="negrita"
+    >· P1. ¿Recuerdas haber visto el siguiente anuncio?</span
+  >
+  En el conjunto de datos desagregado tendremos un 1 si la presona ha contestado
+  que "Sí" y un 2 si la persona ha contestado que "No". En el conjunto de datos
+  agregado se mostrará el porcentaje de "Síes" sobre el total.
+
+  <br /><br />
+
+  <span class="negrita">· P2. ¿Te gustaría volver a verla? </span>Esta pregunta
+  solo se responde si se ha contestado que "Sí" a la P1. En el conjunto de datos
+  desagregado tendremos un 1 si la presona ha contestado que "Sí", un 2 si la
+  persona ha contestado que "No" y si no hay dato es que ha contestado que "No"
+  a la P1. En el conjunto de datos agregado se mostrará el porcentaje de "Síes"
+  sobre el número de personas que han contestado que "Sí" a la P1.
+
+  <br /><br />
+
+  <span class="negrita">· P4. ¿Cuánto te ha gustado el anuncio? </span> En el
+  conjunto de datos desagregado tendremos valores de 0 a 10 (0 "no me ha gustado
+  nada" / 10 "me ha gustado mucho") En el conjunto de datos agregado se mostrará
+  la media.
+
+  <br /><br />
+
+  <span class="negrita"
+    >· P8. ¿Qué palabras te vienen a la mente para describir este anuncio?
+  </span>
+  En el conjunto de datos desagregado tendremos las palabras que han contestado
+  las personas.
+
+  <br /><br />
+
+  <span class="negrita">· NKVPOS.</span>
+
+  <br /><br />
+
+  <span class="negrita">· NKINTEN.</span>
+
+  <br /><br />
+
+  <span class="negrita">· NKCOMPREN.</span>
+
+  <br /><br />
+
+  <span class="negrita">· NKINTERES.</span>
+
+  <br /><br />
+
+  <h2>Gráficos</h2>
+
+  <h3>Top 10</h3>
+
+  En primer lugar, para tener una idea de que campañas han impactado más en las
+  personas, vamos a ver el top 10 de campañas que más han gustado, el top 10 de
+  campañas que más recuerdo tienen y el top 10 de campañas que a la gente le
+  gustaría volver a ver. Para conseguir una visualización clara de esto,
+  utilizaremos unos gráficos de barras horizontales con los datos ordenados de
+  mayor a menor. Así podremos ir viendo de arriba a abajo que
+
+  <iframe
+    width="601"
+    height="371"
+    seamless
+    frameborder="0"
+    scrolling="no"
+    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSeOnCcgxNb6YxT0FFm9_AlpTG7k-RKD3lxzdP4m0N4wCzb8u1XVO_0bPY5EdzzSKgP0wwjvjuya9vN/pubchart?oid=1781138147&amp;format=interactive"
+  ></iframe>
+
+  <iframe
+    width="600"
+    height="371"
+    seamless
+    frameborder="0"
+    scrolling="no"
+    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSeOnCcgxNb6YxT0FFm9_AlpTG7k-RKD3lxzdP4m0N4wCzb8u1XVO_0bPY5EdzzSKgP0wwjvjuya9vN/pubchart?oid=359648006&amp;format=interactive"
+  ></iframe>
+
+  <iframe
+    width="600"
+    height="371"
+    seamless
+    frameborder="0"
+    scrolling="no"
+    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSeOnCcgxNb6YxT0FFm9_AlpTG7k-RKD3lxzdP4m0N4wCzb8u1XVO_0bPY5EdzzSKgP0wwjvjuya9vN/pubchart?oid=171594495&amp;format=interactive"
+  ></iframe>
+
+  <br />
+
+  <h3>Matrices</h3>
+
+  A continuación, vamos a crear una
+  <span class="negrita"> matriz de emoción </span> para ver de las campañas que
+  se encontraban en los top anteriores, cuales han generado más emoción en las
+  personas entrevistadas.
+
+  <br />
+  <br />
+
+  Utilizaremos un gráfico de dispersión donde en el eje X tendremos la variable
+  que ha valorado la valencia positiva y en el eje Y tendremos la variable que
+  ha valorado la intensidad. Los puntos que veremos en el gráfico serán las
+  distintas campañas y cuanto más arriba a la derecha se encuentre un punto en
+  el gráfico, mayor emoción habrá generado esa campaña.
+
+  <br />
+  <br />
+
+  <iframe
+    title="MATRIZ EMOCIONAL"
+    aria-label="Scatter Plot"
+    id="datawrapper-chart-61FDs"
+    src="https://datawrapper.dwcdn.net/61FDs/1/"
+    scrolling="no"
+    frameborder="0"
+    width="800"
+    height="470"
+    data-external="1"
+  ></iframe>
+  <script type="text/javascript">
+    !(function () {
+      'use strict';
+      window.addEventListener('message', function (a) {
+        if (void 0 !== a.data['datawrapper-height']) {
+          var e = document.querySelectorAll('iframe');
+          for (var t in a.data['datawrapper-height'])
+            for (var r = 0; r < e.length; r++)
+              if (e[r].contentWindow === a.source) {
+                var i = a.data['datawrapper-height'][t] + 'px';
+                e[r].style.height = i;
+              }
+        }
+      });
+    })();
+  </script>
+
+  <br />
+  <br />
+
+  De la misma manera, creamos ahora una
+  <span class="negrita"> matriz de interés </span>. En este nuevo gráfico de
+  dispersión tendremos en el eje X la variable que ha valorado la comprensión y
+  en el eje Y la variable que ha valorado el interés. Cuanto más arriba a la
+  derecha se encuentre una campaña en el gráfico querrá decir que mejor se ha
+  comprendido y mayor interés ha provocado.
+
+  <br />
+  <br />
+
+  <iframe
+    title="MATRIZ DE INTERÉS"
+    aria-label="Scatter Plot"
+    id="datawrapper-chart-ST8RS"
+    src="https://datawrapper.dwcdn.net/ST8RS/1/"
+    scrolling="no"
+    frameborder="0"
+    width="800"
+    height="444"
+    data-external="1"
+  ></iframe>
+  <script type="text/javascript">
+    !(function () {
+      'use strict';
+      window.addEventListener('message', function (a) {
+        if (void 0 !== a.data['datawrapper-height']) {
+          var e = document.querySelectorAll('iframe');
+          for (var t in a.data['datawrapper-height'])
+            for (var r = 0; r < e.length; r++)
+              if (e[r].contentWindow === a.source) {
+                var i = a.data['datawrapper-height'][t] + 'px';
+                e[r].style.height = i;
+              }
+        }
+      });
+    })();
+  </script>
+
+  <br />
+  <br />
+
+  Viendo los dos gráficos de dispersión podemos ver como la Campaña 35 podría
+  ser una buena elección como referencia para crear una campaña que impacte de
+  manera positiva al público. Observando la matriz emocional concluimos que es
+  la que mayor emoción genera, ya que es la que mayor valencia positiva ha
+  provocado y la tercera con mayor intensidad. Y si observamos la matriz de
+  interés, vemos como es una de las que se encuentra más arriba a la derecha.
+
+  <h3>Word Cloud</h3>
+
+  Para terminar, podemos utilizar la pregunta P8 del cuestionario para ver que
+  palabras utilizan los usuarios para describir el spot publicitario de la
+  Campaña 35. Utilizaremos un word cloud para así poder apreciar facilmente
+  cuales son las que más se utilizan.
+
+  <br />
+  <br />
+
+  <img src="wordcloud.png" alt="Word Cloud" />
+</div>
